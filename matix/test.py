@@ -35,7 +35,7 @@ def init():
     '''
     initNumFlag = 0
     while 1:
-        k = 2 if random.randrange(0, 10) > 3 else 4                 # 随机生成 2 或 4，生成2和4概率为3：1
+        k = 2 if random.randrange(0, 10) > 1 else 4                 # 随机生成 2 或 4，生成2和4概率为9：1
         s = divmod(random.randrange(0, 16), 4)                      # 随机生成矩阵初始化的下标，比如divmod（15，4）的话，s为（3，3）正好可以作为矩阵下标
         if matix[s[0]][s[1]] == 0:                                  # 只有当其值不为0的时候才赋值，避免第二个值重复
             matix[s[0]][s[1]] = k
@@ -50,7 +50,7 @@ def addRandomNum():
     处理完移动后添加一个新的随机数
     '''
     while 1:
-        k = 2 if random.randrange(0, 10) > 3 else 4
+        k = 2 if random.randrange(0, 10) > 1 else 4
         s = divmod(random.randrange(0, 16), 4)
         if matix[s[0]][s[1]] == 0:
             matix[s[0]][s[1]] = k

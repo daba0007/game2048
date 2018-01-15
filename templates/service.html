@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title text-center wow fadeInDown">
-                    <h2>Services</h2>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                    <h2>操作指南</h2>
+                    <p>每次可以选择上下左右滑动,每滑动一次,所有的数字方块都会往滑动的方向靠拢,系统也会在空白的地方乱数出现一个数字方块,相同数字的方块在靠拢、相撞时会相加。不断的叠加最终拼凑出2048这个数字就算成功</p>
                 </div>
             </div>
         </div>
@@ -13,12 +13,12 @@
 
             <div class="col-md-6 col-sm-12 wow fadeInLeft">
                 <div class="media">
-                    <a href="#" class="pull-left">
-                        <img src="/static/img/icons/monitor.png " class="media-object" alt="Monitor">
-                    </a>
+                    <p class="pull-left">
+                        <img src="/static/img/icons/corner.png " class="media-object" alt="Monitor">
+                    </p>
                     <div class="media-body">
-                        <h3>Vorem amet intuitive</h3>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        <h3>单调性(Monotonicity)</h3>
+                        <p>保证方块的值沿着上下左右方向的，要么增加，要么减少。这个概念单独地解释了一个大家提到的直觉，值较大的方块应该聚集到某一个角落。</p>
                     </div>
                 </div>
 
@@ -26,12 +26,12 @@
 
             <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="media">
-                    <a href="#" class="pull-left">
-                        <img src=" /static/img/icons/cog.png " alt="Cog">
-                    </a>
+                    <p class="pull-left">
+                        <img src=" /static/img/icons/order.png " alt="Cog">
+                    </p>
                     <div class="media-body">
-                        <h3>Vorem amet intuitive</h3>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        <h3>平滑性(Smoothness)</h3>
+                        <p>上面的概念倾向于构造值递减的结构，但如要合并，相邻的方格值必须相同。因此，平滑性衡量相邻方格值的差，并尝试减少差。</p>
                     </div>
                 </div>
 
@@ -39,24 +39,24 @@
 
             <div class="col-md-6 col-sm-12 wow fadeInLeft">
                 <div class="media">
-                    <a href="#" class="pull-left">
-                        <img src=" /static/img/icons/ruler.png " alt="Ruler">
-                    </a>
+                    <p class="pull-left">
+                        <img src=" /static/img/icons/google-nearby.png " alt="Ruler">
+                    </p>
                     <div class="media-body">
-                        <h3>Vorem amet intuitive</h3>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        <h3>注意相邻(Watch Neighbour)</h3>
+                        <p>阻止值小的方块被孤立起来，也将让面板保持良好的组织结构，使得值小的方块渐进层叠式的并逐步合并为值大的方块。</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="media">
-                    <a href="#" class="pull-left">
-                        <img src=" /static/img/icons/camera.png " alt="Camera">
-                    </a>
+                    <p class="pull-left">
+                        <img src=" /static/img/icons/crop-free.png " alt="Camera">
+                    </p>
                     <div class="media-body">
-                        <h3>Vorem amet intuitive</h3>
-                        <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.</p>
+                        <h3>空闲方块(Free Tiles)</h3>
+                        <p>尽量保持更多的空格子，防止方格被填充完，毕竟面板过于拥挤的时候，选择受限且很快会被用完。</p>
                     </div>
                 </div>
             </div>
@@ -68,16 +68,16 @@
 <section id="service-bottom">
     <div class="container">
             <div class="mobile-device">
-               <img data-wow-delay="0.2s" class="img-responsive black  wow fadeInLeftBig" src=" /static/img/icons/iphone-black.png " alt="iPhone Black">
-                <img data-wow-delay="0.5s" class="img-responsive white  wow fadeInLeftBig" src=" /static/img/icons/iphone-white.png " alt="iPhone White">
+                <img data-wow-delay="0.2s" class="img-responsive black  wow fadeInLeftBig" src=" /static/img/icons/Monotonicity.png " alt="iPhone Black">
+                <img data-wow-delay="0.5s" class="img-responsive white  wow fadeInLeftBig" src=" /static/img/icons/Smoothness.png " alt="iPhone White">
             </div>
         <div class="service-features wow fadeInRight">
-            <h3>OUR DESIGNS COMES WITH...</h3>
+            <h3>双人对弈模型</h3>
             <ul>
-                <li>Responsive Design</li>
-                <li>Modern And Clean Design</li>
-                <li>Clean Code</li>
-                <li>Browser Friendly</li>
+                <li>玩家向四个方向中的一个移动</li>
+                <li>计算机在某个空格中填入2或4</li>
+                <li>任一时刻对弈双方对格局的信息完全一致</li>
+                <li>移动策略仅依赖对接下来格局的推理</li>
             </ul>
         </div>
     </div>
