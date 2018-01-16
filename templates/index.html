@@ -15,7 +15,7 @@
 
         <!-- Site Title -->
         <title>{% block title %}2048{% endblock %}-大巴0007</title>
-
+        <link rel="stylesheet" href="/static/css/grid.css" />
         <link rel="stylesheet" href=" /static/iconfont/iconfont.css">
         <!-- Fontawesome -->
         <link rel="stylesheet" href=" /static/css/font-awesome.min.css">
@@ -42,8 +42,8 @@
         {% include 'home.html' %}
         {% include 'service.html' %}
         {% include 'document.html' %}
-        {% include 'about.html' %}
-        {% include 'pricing.html' %}
+        {% include 'count.html' %}
+        {% include 'ai.html' %}
         {% include 'contact.html' %}
         {% include 'footer.html' %}
 
@@ -70,5 +70,8 @@
         <!-- theme custom scripts -->
         <script src=" /static/js/main.js "></script>
         <script src=" /static/js/myapp.js "></script>
+        <script src="/static/js/support2048.js"></script>
+        <script src="/static/js/showanimation2048.js"></script>
+        <script src="/static/js/main2048.js"></script>
     </body>
 </html>

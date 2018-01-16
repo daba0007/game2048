@@ -21,3 +21,14 @@ def contact_us(request):
     message="感谢您的宝贵意见"
     ret = {'message': message}
     return HttpResponse(json.dumps(ret))
+
+@csrf_exempt
+def get_board(request):
+    board = [[] for i in range(4)]
+    board[0] = request.POST.getlist('board[0][]', '')
+    board[1] = request.POST.getlist('board[1][]', '')
+    board[2] = request.POST.getlist('board[2][]', '')
+    board[3] = request.POST.getlist('board[3][]', '')
+    message = "收到"
+    ret = {'message': message}
+    return HttpResponse(json.dumps(ret))
