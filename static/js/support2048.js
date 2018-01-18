@@ -62,6 +62,10 @@ function getScore(){
     document.getElementById("score").innerHTML=score;
 }
 
+function ai_getScore(){
+    document.getElementById("ai_score").innerHTML=ai_score;
+}
+
 //在随机生成数字的时候判断16宫格中是否还有空间
 function nospace(board) {
     for ( var i = 0; i < 4; i++)
@@ -122,7 +126,7 @@ function noBlockVertical(col, row1, row2, board){
     return true;
 }//最后收尾
 function nomove(board){
-    if(canMoveLeft(board)|| canMoveRight(board))
+    if(canMoveLeft(board)|| canMoveRight(board)||canMoveUp(board)||canMoveDown(board))
         return false;
     return true;
 }

@@ -87,6 +87,7 @@ function generateOneNumber(){
     showNumberWithAnimation(randx,randy,randNumber);
     return true;
 }
+
 //将棋盘返回后台计算
 function getBoard(){
     $.ajax({
@@ -106,7 +107,7 @@ function getBoard(){
 //事件响应循环
 $(document).keydown(function(event){
     switch (event.keyCode) {
-    case 37://left
+    case 65://left
         if(moveLeft()){
             //setTimeout("generateOneNumber()",210);
             getScore();
@@ -114,21 +115,21 @@ $(document).keydown(function(event){
             setTimeout("isgameover()",400);//300毫秒
         }
         break;
-    case 38://up
+    case 87://up
         if(moveUp()){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
         }
         break;
-    case 39://right
+    case 68://right
         if(moveRight()){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
         }
         break;
-    case 40://down
+    case 83://down
         if(moveDown()){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
