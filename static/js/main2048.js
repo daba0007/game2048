@@ -112,7 +112,6 @@ $(document).keydown(function(event){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
-            getBoard();
         }
         break;
     case 38://up
@@ -120,7 +119,6 @@ $(document).keydown(function(event){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
-            getBoard();
         }
         break;
     case 39://right
@@ -128,7 +126,6 @@ $(document).keydown(function(event){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
-            getBoard();
         }
         break;
     case 40://down
@@ -136,7 +133,6 @@ $(document).keydown(function(event){
             getScore();
             generateOneNumber();//每次新增一个数字就可能出现游戏结束
             setTimeout("isgameover()",400);//300毫秒
-            getBoard();
         }
         break;
     }
@@ -164,6 +160,7 @@ function moveLeft(){//更多地细节信息
     if( !canMoveLeft(board))
         return false;
 
+    isaddedArray();
     //真正的moveLeft函数//标准
     for(var i = 0;i<4;i++)
         for(var j = 1;j<4;j++) {//第一列的数字不可能向左移动
