@@ -132,8 +132,12 @@ function ai_Board(board,score){
 
      // 查询游戏是否结束
      this.isgameover = function (){
-        if(this.nospace() && this.nomove())
+        if(this.nospace() && this.nomove()){
             gameover();
+            return True;
+        }
+
+
      }
 
      // 将判断能否合并的数组值置为0

@@ -1,3 +1,24 @@
+// 上传代码函数
+$('#uploadjs').click(function() {
+    var file_obj = document.getElementById('files').files[0];
+    var fd = new FormData();
+    fd.append('username','root');
+    fd.append('files',file_obj);
+    $.ajax({
+        url: '/upload_js/',
+        type: 'POST',
+        data: fd,
+        processData: false,
+        contentType: false,
+        success:function(data){
+            data = JSON.parse(data);
+            alert(data["message"]);
+            $.getScript("/static/js/ai.js");
+        }
+    })
+});
+
+
 // 二维数组赋值函数
 function setA(a,b){
     for(var i = 0; i<4;i++){
@@ -20,6 +41,9 @@ function showNumberWithAnimation(i, j, randNumber) {
     numberCell.css("background-color", getNumberBackgroundColor(randNumber));
     numberCell.css("color", getNumberColor(randNumber));
     numberCell.text(randNumber);
+    if(randNumber>100){
+        numberCell.css("font-size","25px");
+    }
 
     numberCell.animate({
         width : "50px",
@@ -44,12 +68,16 @@ function ai_showNumberWithAnimation(i, j, randNumber) {
     numberCell.css("color", getNumberColor(randNumber));
     numberCell.text(randNumber);
 
+
     numberCell.animate({
         width : "50px",
         height : "50px",
         top : getPosTop(i, j),
         left : getPosLeft(i, j)
     }, 50);
+    if(randNumber>100){
+        numberCell.css("font-size","25px");
+    }
 }
 
 // 将ai_board的cell移动

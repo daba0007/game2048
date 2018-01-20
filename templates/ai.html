@@ -4,9 +4,9 @@
 
             <div class="section-title text-center wow fadeInUp">
                 <h2>AI界面</h2>
-                <p>尝试使用ai来完成2048,你可以上传自己的代码来试试</p>
-                <a href="javascript:ai_newgame();" id="ai_newgamebutton" style="color: #00c7fc">New Game</a>
-                <p>score:<span id="ai_score">0</span></p>
+                <p>尝试使用ai来完成2048,在下方上传自己的代码来试试</p>
+
+                <h1>score:<span id="ai_score">0</span></h1>
             </div>
 
             <div id="ai_grid-container" >
@@ -31,6 +31,7 @@
                 <div class="ai_grid-cell" id="ai_grid-cell-3-3"></div>
             </div>
             <div class="section-title text-center wow fadeInUp">
+                <button type="button" class="btn-lg btn-success" id="ai_newgame">新游戏</button>
                 <button type="button" class="btn-lg btn-success" id="ai_start">开始</button>
             </div>
 
@@ -38,23 +39,25 @@
     </div>
 </section>
 <section id="subscribe">
+    <div class="section-title text-center wow fadeInDown" style="margin-top: 50px" >
+        <h2 style="color: #ffffff">上传须知</h2>
+        <p style ="color: #ffffff">通过 AI ( score , board ) 返回一个动作即可让 ai 行动起来。</p><br/>
+        <p style ="color: #ffffff">比如 function AI ( score , board ) { return "Left" } ,方格会一直往左走</p><br/>
+        <p style ="color: #ffffff">返回的字符只有 "Left" , "Right" , "Up" , "Down" 有效</p><br/>
+        <p style ="color: #ffffff">上传后点击ai界面开始即可运行程序</p><br/>
+        <p style ="color: #ffffff">提交你的代码，让你的2048跑起来吧</p>
+    </div>
     <div class="container">
         <div class="row">
 
-            <div class="col-md-7 wow fadeInLeft">
-                <form action="#" method="post" class="subscription-form">
-                    <i class="fa fa-envelope-o fa-lg"></i>
-                    <input type="email" name="subscribe" class="subscribe" placeholder="你的代码" required="">
-                    <input type="submit" value="提 交" id="mail-submit">
-                </form>
+            <div class="wow fadeInLeft text-center">
+                <span>
+                    <form action="#" method="post" class="subscription-form" style="display: inherit;" >
+                        <input name="subscribe" class="file" type="file" id="files" style="display: inherit">
+                    </form>
+                    <button type="button" class="btn  btn-blue" id="uploadjs" style="display: inherit">提交</button>
+                </span>
             </div>
-
-            <div class="col-md-4 text-left wow fadeInRight">
-                <p>提交你的代码，让你的2048跑起来吧</p>
-            </div>
-
-
-
         </div>
     </div>
 </section>

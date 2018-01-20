@@ -9,6 +9,10 @@ $(document).ready(function(e){
     game.newgame();
 });
 
+$('#player_newgame').click(function() {
+    game.newgame();
+});
+
 //事件响应循环
 $(document).keydown(function(event){
     switch (event.keyCode) {

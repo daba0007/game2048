@@ -7,6 +7,10 @@ import os
 
 
 def index(request):
+    exist_file = os.path.exists('static/js/ai.js')
+    if exist_file:
+        os.remove(r'static/js/ai.js')
+    os.mknod(r'static/js/ai.js')
     return render(request, 'index.html')
 
 
@@ -32,5 +36,18 @@ def get_board(request):
     board[2] = request.POST.getlist('board[2][]', '')
     board[3] = request.POST.getlist('board[3][]', '')
     message = "收到"
+    ret = {'message': message}
+    return HttpResponse(json.dumps(ret))
+
+@csrf_exempt
+def get_aijs(request):
+    files = request.FILES.get('files')
+    file_name = files.name
+    path_name = 'static/js/'
+    img_path = os.path.join(path_name, file_name)
+    with open(img_path, 'wb') as f:
+        for item in files.chunks():
+            f.write(item)
+    message = "上传成功"
     ret = {'message': message}
     return HttpResponse(json.dumps(ret))
