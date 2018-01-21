@@ -3,19 +3,21 @@ var the_ai_score = 0;
 var top = 240;
 
 var ai_game = new ai_Board(the_ai_board,the_ai_score)
-
+var int=self.setInterval("showmove(ai_game)",300);
 // 开始一盘新游戏
 $(document).ready(function(e){
+    int=window.clearInterval(int);
     ai_game.newgame();
 });
 
 $('#ai_newgame').click(function() {
+    int=window.clearInterval(int);
     ai_game.newgame();
 });
 
 // 展示ai移动
 function showmove(aigame){
-    if(!ai_game.nomove()){
+    if(!ai_game.isgameover()){
         var grid= new Array();
         setA(ai_game.board,grid);
         var sum=ai_score.score;
@@ -46,6 +48,9 @@ function showmove(aigame){
             ai_game.isgameover();
         }
     }
+    else{
+        int=window.clearInterval(int);
+    }
 
 }
 
@@ -53,5 +58,6 @@ function showmove(aigame){
 //事件响应循环
 
 $('#ai_start').click(function() {
-    setInterval("showmove(ai_game)",300)
+    //setInterval("showmove(ai_game)",300)
+    int=self.setInterval("showmove(ai_game)",300);
 });
