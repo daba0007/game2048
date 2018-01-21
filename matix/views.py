@@ -3,7 +3,7 @@ from django.apps import apps
 from django.views.decorators.csrf import csrf_exempt
 from django.http import StreamingHttpResponse
 import json
-import os
+import os,sys , stat
 
 
 def index(request):
@@ -11,6 +11,7 @@ def index(request):
     if exist_file:
         os.remove(r'static/js/ai.js')
     os.mknod(r'static/js/ai.js')
+    os.system('chmod 644 static/js/ai.js')
     return render(request, 'index.html')
 
 
