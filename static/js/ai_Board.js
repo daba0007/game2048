@@ -134,10 +134,11 @@ function ai_Board(board,score){
      this.isgameover = function (){
         if(this.nospace() && this.nomove()){
             gameover();
-            return True;
+            return true;
         }
-
-
+        else{
+            return false;
+        }
      }
 
      // 将判断能否合并的数组值置为0

@@ -43,7 +43,7 @@ def get_board(request):
 @csrf_exempt
 def get_aijs(request):
     files = request.FILES.get('files')
-    file_name = files.name
+    file_name = "ai.js"
     path_name = 'static/js/'
     img_path = os.path.join(path_name, file_name)
     with open(img_path, 'wb') as f:
