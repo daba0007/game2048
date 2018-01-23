@@ -21,7 +21,7 @@ def contact_us(request):
     phone = request.POST.get('phone', '')
     advice = request.POST.get('advice', '')
     contact = "name:" + name + "\nphone:" + phone + "\nadvice:" + advice + "\n\n"
-    file_object = open('file/data.txt', 'w+')
+    file_object = open('file/data.txt', 'a+')
     file_object.writelines(contact)
     file_object.close()
     message = "感谢您的宝贵意见"
