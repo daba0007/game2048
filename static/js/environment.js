@@ -75,9 +75,7 @@ function ai_showNumberWithAnimation(i, j, randNumber) {
         top : getPosTop(i, j),
         left : getPosLeft(i, j)
     }, 50);
-    if(randNumber>100){
-        numberCell.css("font-size","25px");
-    }
+
 }
 
 // 将ai_board的cell移动

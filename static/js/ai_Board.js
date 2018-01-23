@@ -185,7 +185,7 @@ function ai_Board(board,score){
                             ai_showMoveAnimation(i, j, i, k);
                             //add
                             if (this.added[i][k] != 0) { //目标落脚点是否完成过合并
-                                this.board[i][k] = this.board[i][j];
+                                this.board[i][k+1] = this.board[i][j];
                                 this.board[i][j] = 0;
                             }
                             else {
