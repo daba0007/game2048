@@ -172,6 +172,15 @@ function updateBoardView(){
                 theNumberCell.css('color',getNumberColor(theplayer_board[i][j]));//返回前景色
                 theNumberCell.text(theplayer_board[i][j]);
             }
+            if(theplayer_board[i][j] > 100){
+                theNumberCell.css('font-size',"25px");
+            }
+            if(theplayer_board[i][j] > 1000){
+                theNumberCell.css('font-size',"20px");
+            }
+            if(theplayer_board[i][j] > 10000){
+                theNumberCell.css('font-size',"15px");
+            }
         }
     }
 }
@@ -197,6 +206,15 @@ function ai_updateBoardView(){
                 theNumberCell.css('background-color',getNumberBackgroundColor(the_ai_board[i][j]));//返回背景色
                 theNumberCell.css('color',getNumberColor(the_ai_board[i][j]));//返回前景色
                 theNumberCell.text(the_ai_board[i][j]);
+            }
+            if(the_ai_board[i][j] > 100){
+                theNumberCell.css('font-size',"25px");
+            }
+            if(the_ai_board[i][j] > 1000){
+                theNumberCell.css('font-size',"20px");
+            }
+            if(the_ai_board[i][j] > 10000){
+                theNumberCell.css('font-size',"15px");
             }
         }
     }
