@@ -24,7 +24,7 @@ def contact_us(request):
     file_object = open('file/data.txt', 'a+')
     file_object.writelines(contact)
     file_object.close()
-    message = "感谢您的宝贵意见"
+    message = "Thank you for your advices"
     ret = {'message': message}
     return HttpResponse(json.dumps(ret))
 
@@ -36,7 +36,7 @@ def get_board(request):
     board[1] = request.POST.getlist('board[1][]', '')
     board[2] = request.POST.getlist('board[2][]', '')
     board[3] = request.POST.getlist('board[3][]', '')
-    message = "收到"
+    message = "Accepted"
     ret = {'message': message}
     return HttpResponse(json.dumps(ret))
 
@@ -49,6 +49,6 @@ def get_aijs(request):
     with open(img_path, 'wb') as f:
         for item in files.chunks():
             f.write(item)
-    message = "上传成功"
+    message = "success"
     ret = {'message': message}
     return HttpResponse(json.dumps(ret))
