@@ -12,7 +12,7 @@ django-ckeditor==5.0.3
 django-redis==4.4.3
 django-filters==0.2.1
 django-pagination==1.0.7
-djangorestframework==3.3.3
+djangorestframework==3.9.1
 gunicorn==19.4.5
 Pillow==3.2.0
 Pygments==2.1.3
